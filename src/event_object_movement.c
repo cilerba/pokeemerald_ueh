@@ -5143,11 +5143,24 @@ bool8 MovementType_FollowPlayer_Moving(struct ObjectEvent *objectEvent, struct S
     }
     return FALSE;
 }
-
+#define sState2 data[7]
 bool8 FollowablePlayerMovement_Idle(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 playerDirection, bool8 tileCallback(u8))
 {
     u8 direction;
     if (!objectEvent->singleMovementActive) { // walk in place
+
+        // Bounce up and down
+        switch (sprite->sState2)
+        {
+        case 0:
+            sprite->y2 += 1;
+            sprite->sState2++;
+            break;
+        default:
+            sprite->y2 -= 1;
+            sprite->sState2 = 0;
+            break;
+        }
       ObjectEventSetSingleMovement(objectEvent, sprite, GetWalkInPlaceNormalMovementAction(objectEvent->facingDirection));
       sprite->data[1] = 1;
       objectEvent->singleMovementActive = 1;
@@ -5181,6 +5194,18 @@ bool8 FollowablePlayerMovement_Step(struct ObjectEvent *objectEvent, struct Spri
     x = objectEvent->currentCoords.x;
     y = objectEvent->currentCoords.y;
     ClearObjectEventMovement(objectEvent, sprite);
+
+    switch (sprite->sState2)
+    {
+    case 0:
+        sprite->y2 += 1;
+        sprite->sState2++;
+        break;
+    default:
+        sprite->y2 -= 1;
+        sprite->sState2 = 0;
+        break;
+    }
 
     if (objectEvent->invisible) { // Animate exiting pokeball
       MoveObjectEventToMapCoords(objectEvent, targetX, targetY);
