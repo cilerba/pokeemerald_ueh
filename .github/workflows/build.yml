@@ -38,9 +38,6 @@ jobs:
 
       - name: Install agbcc
         run: |
-          cd ..
-          git clone --depth 1 https://github.com/pret/agbcc
-          cd agbcc
           ./build.sh
           ./install.sh ../
         working-directory: agbcc
