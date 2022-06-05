@@ -1,7 +1,7 @@
 {
-  "id": "MAP_IRENIA_TOWN",
-  "name": "IreniaTown",
-  "layout": "LAYOUT_IRENIA_TOWN",
+  "id": "MAP_LUMBRIDGE_TOWN",
+  "name": "LumbridgeTown",
+  "layout": "LAYOUT_LUMBRIDGE_TOWN",
   "music": "MUS_LITTLEROOT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,

@@ -1791,21 +1791,21 @@ gTilesetTiles_UEHGeneral::
 	.incbin "data/tilesets/primary/uehgeneral/tiles.4bpp.lz"
 
 	.align 2
-gTilesetPalettes_Irenia::
-	.incbin "data/tilesets/secondary/irenia/palettes/00.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/01.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/02.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/03.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/04.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/05.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/06.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/07.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/08.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/09.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/10.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/11.gbapal"
-	.incbin "data/tilesets/secondary/irenia/palettes/12.gbapal"
+gTilesetPalettes_Lumbridge::
+	.incbin "data/tilesets/secondary/lumbridge/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/lumbridge/palettes/12.gbapal"
 
 	.align 2
-gTilesetTiles_Irenia::
-	.incbin "data/tilesets/secondary/irenia/tiles.4bpp.lz"
+gTilesetTiles_Lumbridge::
+	.incbin "data/tilesets/secondary/lumbridge/tiles.4bpp.lz"

@@ -580,9 +580,9 @@ gMetatiles_UEHGeneral::
 gMetatileAttributes_UEHGeneral::
 	.incbin "data/tilesets/primary/uehgeneral/metatile_attributes.bin"
 	.align 1
-gMetatiles_Irenia::
-	.incbin "data/tilesets/secondary/irenia/metatiles.bin"
+gMetatiles_Lumbridge::
+	.incbin "data/tilesets/secondary/lumbridge/metatiles.bin"
 
 	.align 1
-gMetatileAttributes_Irenia::
-	.incbin "data/tilesets/secondary/irenia/metatile_attributes.bin"
+gMetatileAttributes_Lumbridge::
+	.incbin "data/tilesets/secondary/lumbridge/metatile_attributes.bin"

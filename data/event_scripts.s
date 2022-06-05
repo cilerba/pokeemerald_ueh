@@ -1059,4 +1059,8 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 
-	.include "data/maps/IreniaTown/scripts.inc"
+	.include "data/maps/LumbridgeTown/scripts.inc"
+
+	.include "data/maps/LumbridgeTown_PlayersHouse_2F/scripts.inc"
+
+	.include "data/maps/LumbridgeTown_PlayersHouse_1F/scripts.inc"

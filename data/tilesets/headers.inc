@@ -867,12 +867,12 @@ gTileset_UEHGeneral::
 	.4byte NULL
 
 	.align 2
-gTileset_Irenia::
+gTileset_Lumbridge::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary
 	.2byte 0
-	.4byte gTilesetTiles_Irenia
-	.4byte gTilesetPalettes_Irenia
-	.4byte gMetatiles_Irenia
-	.4byte gMetatileAttributes_Irenia
+	.4byte gTilesetTiles_Lumbridge
+	.4byte gTilesetPalettes_Lumbridge
+	.4byte gMetatiles_Lumbridge
+	.4byte gMetatileAttributes_Lumbridge
 	.4byte NULL

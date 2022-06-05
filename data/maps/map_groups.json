@@ -2,6 +2,8 @@
   "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup_TownsAndRoutes",
+    "gMapGroup_IndoorLumbridge",
+    "gMapGroup_IndoorIrenia",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
@@ -94,7 +96,14 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125",
-    "IreniaTown"
+    "LumbridgeTown"
+  ],
+  "gMapGroup_IndoorLumbridge": [
+    "LumbridgeTown_PlayersHouse_2F",
+    "LumbridgeTown_PlayersHouse_1F"
+  ],
+  "gMapGroup_IndoorIrenia": [
+
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
