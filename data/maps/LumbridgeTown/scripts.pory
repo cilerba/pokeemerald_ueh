@@ -1,0 +1,115 @@
+mapscripts LumbridgeTown_MapScripts {}
+
+script LumbridgeTown_MomsBike{
+    lock
+    msgbox("It's Mom's bike.")
+    msgbox("Maybe one day I'll have my own!")
+    release
+    end
+}
+
+script LumbridgeTown_Dad{
+    lock
+    switch (var(VAR_LUMBRIDGEPLAYER_STATE)){
+        case 1:
+            faceplayer
+            msgbox(format("Hey there, {PLAYER}!\pHave you spoken to Professor Larch yet? Mom told me there's a package waiting for you."))
+        case 2:
+            faceplayer
+            msgbox(format("Congrats, {PLAYER}! I can't believe the day has finally come."))
+        case 4:
+            faceplayer
+            if (flag(FLAG_SAID_BYE_DAD) == TRUE)
+            {
+                msgbox(format("Good luck, {PLAYER}!"))
+            } else {
+                msgbox(format("You're off, huh?\pI'm really proud of you, {PLAYER}.\pMom and I will be rooting for you."))
+                setflag(FLAG_SAID_BYE_DAD)
+                if (flag(FLAG_SAID_BYE_MOM) == TRUE)
+                {
+                    setvar(VAR_LUMBRIDGEPLAYER_STATE, 5)
+                }
+            }
+        case 5:
+            faceplayer
+            msgbox(format("Workin' hard!"))
+    }
+    release
+    end
+}
+
+script LumbridgeTown_Worker {
+    lock
+    faceplayer
+    msgbox(format("Sometimes I bring my Pokémon out to help me chop trees.\pErm...Please don't tell my boss."))
+    release
+    end
+}
+
+script LumbridgeTown_PlayerMailbox {
+    lock
+    msgbox(format("{PLAYER}'s Home"), MSGBOX_SIGN)
+    release
+    end
+}
+
+script LumbridgeTown_ProfMailbox {
+    lock
+    msgbox(format("Professor Larch's Home"), MSGBOX_SIGN)
+    release
+    end
+}
+
+script LumbridgeTown_ProfSign {
+    lock
+    msgbox(format("Larch Laboratory"), MSGBOX_SIGN)
+    release
+    end
+}
+
+script LumbridgeTown_TownSign {
+    lock
+    msgbox(format("Lumbridge Town"), MSGBOX_SIGN)
+    release
+    end
+}
+
+script LumbridgeTown_LumberSign {
+    lock
+    msgbox(format("Lumber Yard"), MSGBOX_SIGN)
+    release
+    end
+}
+
+script LumbridgeTown_Technology {
+    lock
+    faceplayer
+    msgbox(format("Professor Larch has been making amazing progress in reverse engineering the science behind Poké Balls.\pTechnology is incredible!"))
+    release
+    end
+}
+
+script LumbridgeTown_Trigger {
+    lock
+    msgbox(format("I should speak to Professor Larch first."))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, LumbridgeTown_Player_MoveLeft)
+    waitmovement(0)
+    release
+    end
+}
+
+script LumbridgeTown_Trigger_Bye {
+    lock
+    msgbox(format("I should say bye to mom and dad first."))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, LumbridgeTown_Player_MoveLeft)
+    waitmovement(0)
+    release
+    end
+}
+
+movement LumbridgeTown_Player_MoveLeft {
+    walk_left
+    step_end
+}

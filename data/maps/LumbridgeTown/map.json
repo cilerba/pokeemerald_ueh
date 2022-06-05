@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LumbridgeTown_Dad",
       "flag": "0"
     },
     {
@@ -37,17 +37,126 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LumbridgeTown_Worker",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 23,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LumbridgeTown_Technology",
       "flag": "0"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_LUMBRIDGE_TOWN_PLAYERS_HOUSE_1F",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_LUMBRIDGEPLAYER_STATE",
+      "var_value": "1",
+      "script": "LumbridgeTown_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_LUMBRIDGEPLAYER_STATE",
+      "var_value": "1",
+      "script": "LumbridgeTown_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_LUMBRIDGEPLAYER_STATE",
+      "var_value": "4",
+      "script": "LumbridgeTown_Trigger_Bye"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_LUMBRIDGEPLAYER_STATE",
+      "var_value": "4",
+      "script": "LumbridgeTown_Trigger_Bye"
+    }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "LumbridgeTown_Trigger_Bye"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "LumbridgeTown_ProfMailbox"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "LumbridgeTown_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "LumbridgeTown_LumberSign"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "LumbridgeTown_PlayerMailbox"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LumbridgeTown_MomsBike"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LumbridgeTown_MomsBike"
+    }
   ]
 }
