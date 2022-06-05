@@ -557,3 +557,32 @@ gMetatiles_UnionRoom::
 	.align 1
 gMetatileAttributes_UnionRoom::
 	.incbin "data/tilesets/secondary/union_room/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_UEHBuilding::
+	.incbin "data/tilesets/primary/uehbuilding/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_UEHBuilding::
+	.incbin "data/tilesets/primary/uehbuilding/metatile_attributes.bin"
+	.align 1
+gMetatiles_UEHGenericBuilding_1::
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_UEHGenericBuilding_1::
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/metatile_attributes.bin"
+	.align 1
+gMetatiles_UEHGeneral::
+	.incbin "data/tilesets/primary/uehgeneral/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_UEHGeneral::
+	.incbin "data/tilesets/primary/uehgeneral/metatile_attributes.bin"
+	.align 1
+gMetatiles_Irenia::
+	.incbin "data/tilesets/secondary/irenia/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Irenia::
+	.incbin "data/tilesets/secondary/irenia/metatile_attributes.bin"

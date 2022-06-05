@@ -1729,3 +1729,83 @@ gTilesetPalettes_UnionRoom::
 	.align 2
 gTilesetTiles_UnionRoom::
 	.incbin "data/tilesets/secondary/union_room/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_UEHBuilding::
+	.incbin "data/tilesets/primary/uehbuilding/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/uehbuilding/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_UEHBuilding::
+	.incbin "data/tilesets/primary/uehbuilding/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_UEHGenericBuilding_1::
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_UEHGenericBuilding_1::
+	.incbin "data/tilesets/secondary/uehgenericbuilding_1/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_UEHGeneral::
+	.incbin "data/tilesets/primary/uehgeneral/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/uehgeneral/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_UEHGeneral::
+	.incbin "data/tilesets/primary/uehgeneral/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Irenia::
+	.incbin "data/tilesets/secondary/irenia/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/irenia/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Irenia::
+	.incbin "data/tilesets/secondary/irenia/tiles.4bpp.lz"

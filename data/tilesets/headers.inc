@@ -832,3 +832,47 @@ gTileset_UnionRoom::
 	.4byte gMetatiles_UnionRoom
 	.4byte gMetatileAttributes_UnionRoom
 	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_UEHBuilding::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_UEHBuilding
+	.4byte gTilesetPalettes_UEHBuilding
+	.4byte gMetatiles_UEHBuilding
+	.4byte gMetatileAttributes_UEHBuilding
+	.4byte NULL
+
+	.align 2
+gTileset_UEHGenericBuilding_1::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_UEHGenericBuilding_1
+	.4byte gTilesetPalettes_UEHGenericBuilding_1
+	.4byte gMetatiles_UEHGenericBuilding_1
+	.4byte gMetatileAttributes_UEHGenericBuilding_1
+	.4byte NULL
+
+	.align 2
+gTileset_UEHGeneral::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_UEHGeneral
+	.4byte gTilesetPalettes_UEHGeneral
+	.4byte gMetatiles_UEHGeneral
+	.4byte gMetatileAttributes_UEHGeneral
+	.4byte NULL
+
+	.align 2
+gTileset_Irenia::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Irenia
+	.4byte gTilesetPalettes_Irenia
+	.4byte gMetatiles_Irenia
+	.4byte gMetatileAttributes_Irenia
+	.4byte NULL
