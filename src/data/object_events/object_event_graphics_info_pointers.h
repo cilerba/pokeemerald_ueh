@@ -242,6 +242,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AnimatedBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight;
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Worker;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerDad;
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trader;
@@ -494,6 +497,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ANIMATED_BALL] =            &gObjectEventGraphicsInfo_AnimatedBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
+    [OBJ_EVENT_GFX_WORKER] =                   &gObjectEventGraphicsInfo_Worker,
+    [OBJ_EVENT_GFX_WORKERDAD] =                &gObjectEventGraphicsInfo_WorkerDad
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

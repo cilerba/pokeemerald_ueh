@@ -1968,3 +1968,6 @@ $(OBJEVENTGFXDIR)/pokemon/deoxys.4bpp: %.4bpp: %.png
 
 $(MISCGFXDIR)/emotes.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
+
+$(OBJEVENTGFXDIR)/people/worker.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4

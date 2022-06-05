@@ -809,3 +809,5 @@ const u16 gObjectEventPaletteLight[] = INCBIN_U16("graphics/object_events/palett
 const u16 gObjectEventPaletteLight2[] = INCBIN_U16("graphics/object_events/palettes/light2.gbapal");
 const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal");
 const u16 gObjectEventPaletteNeonLight[] = INCBIN_U16("graphics/object_events/palettes/neon_light.gbapal");
+
+const u32 gObjectEventPic_Worker[] = INCBIN_U32("graphics/object_events/pics/people/worker.4bpp");
