@@ -304,7 +304,7 @@ static const u8 sShadowEffectTemplateIds[] = {
 
 const u16 gShadowVerticalOffsets[] = {
     4,
-    4,
+    2,
     4,
     16
 };
