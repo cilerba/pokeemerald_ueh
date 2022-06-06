@@ -71,7 +71,7 @@
       "elevation": 0,
       "var": "VAR_LUMBRIDGEPLAYER_STATE",
       "var_value": "1",
-      "script": ""
+      "script": "LumbridgeTown_Trigger"
     },
     {
       "type": "trigger",
