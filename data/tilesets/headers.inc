@@ -876,3 +876,14 @@ gTileset_Lumbridge::
 	.4byte gMetatiles_Lumbridge
 	.4byte gMetatileAttributes_Lumbridge
 	.4byte NULL
+
+	.align 2
+gTileset_UEHLab::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_UEHLab
+	.4byte gTilesetPalettes_UEHLab
+	.4byte gMetatiles_UEHLab
+	.4byte gMetatileAttributes_UEHLab
+	.4byte NULL

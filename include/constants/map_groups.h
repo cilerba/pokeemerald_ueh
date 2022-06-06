@@ -68,6 +68,7 @@
 // gMapGroup_IndoorLumbridge
 #define MAP_LUMBRIDGE_TOWN_PLAYERS_HOUSE_2F (0 | (1 << 8))
 #define MAP_LUMBRIDGE_TOWN_PLAYERS_HOUSE_1F (1 | (1 << 8))
+#define MAP_LUMBRIDGE_TOWN_LAB_1F           (2 | (1 << 8))
 
 // gMapGroup_IndoorIrenia
 

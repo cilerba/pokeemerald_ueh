@@ -586,3 +586,11 @@ gMetatiles_Lumbridge::
 	.align 1
 gMetatileAttributes_Lumbridge::
 	.incbin "data/tilesets/secondary/lumbridge/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_UEHLab::
+	.incbin "data/tilesets/secondary/uehlab/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_UEHLab::
+	.incbin "data/tilesets/secondary/uehlab/metatile_attributes.bin"

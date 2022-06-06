@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_UEHGenericBuilding_1",
       "border_filepath": "data/layouts/LumbridgeTown_PlayersHouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/LumbridgeTown_PlayersHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMBRIDGE_TOWN_LAB_1F",
+      "name": "LumbridgeTown_Lab_1F_Layout",
+      "width": 13,
+      "height": 15,
+      "primary_tileset": "gTileset_UEHBuilding",
+      "secondary_tileset": "gTileset_UEHLab",
+      "border_filepath": "data/layouts/LumbridgeTown_Lab_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LumbridgeTown_Lab_1F/map.bin"
     }
   ]
 }

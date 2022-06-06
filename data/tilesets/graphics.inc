@@ -1809,3 +1809,23 @@ gTilesetPalettes_Lumbridge::
 	.align 2
 gTilesetTiles_Lumbridge::
 	.incbin "data/tilesets/secondary/lumbridge/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_UEHLab::
+	.incbin "data/tilesets/secondary/uehlab/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/uehlab/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_UEHLab::
+	.incbin "data/tilesets/secondary/uehlab/tiles.4bpp.lz"
