@@ -1,1 +1,267 @@
-mapscripts LumbridgeTown_Lab_1F_MapScripts {}
+const CLYDE = 1
+const LARCH = 2
+
+mapscripts LumbridgeTown_Lab_1F_MapScripts {
+        MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_LUMBRIDGEPLAYER_STATE, 1: LumbridgeTown_Lab_1F_Intro
+        VAR_LUMBRIDGEPLAYER_STATE, 3: LumbridgeTown_Lab_1F_DeliverPackage
+    ]
+}
+
+script LumbridgeTown_Lab_1F_Intro {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, LumbridgeTown_Lab_1F_Intro_PlayerUp)
+    waitmovement(0)
+    msgbox(format("Hey it's {PLAYER}! What brings you here?"))
+    closemessage
+    applymovement(CLYDE, LumbridgeTown_Lab_1F_Intro_FaceLeft)
+    waitmovement(CLYDE)
+    msgbox(format("Um…ma'am.\pThe package."))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_FaceRight)
+    waitmovement(LARCH)
+    msgbox(format("Oh yes!\lHow could I forget?"))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_FaceDown)
+    applymovement(CLYDE, LumbridgeTown_Lab_1F_Intro_FaceDown)
+    waitmovement(LARCH)
+    msgbox(format("{PLAYER}, I'm so glad you're here."))
+    msgbox(format("As you may know, Professor Elm and I have been working together to register you as a Pokémon Trainer ever since you moved here a few weeks ago."))
+    msgbox(format("Today, I'm happy to announce that the registration process is complete!\pYour Trainer ID arrived this morning via PeliPost."))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepDown)
+    waitmovement(LARCH)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(format("{PLAYER} received a Trainer ID!"))
+    waitmessage
+    waitfanfare
+    setflag(FLAG_SYS_TRAINERID_GET)
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepBack)
+    waitmovement(LARCH)
+    msgbox(format("Congratulations!\pYou are officially a Pokémon Trainer."))
+    closemessage
+    delay(120)
+    msgbox(format("… …"))
+    applymovement(CLYDE, LumbridgeTown_Lab_1F_Intro_FaceLeft)
+    waitmovement(CLYDE)
+    msgbox(format("Um…ma'am.\pDid you forge-"))
+    waitmessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_Exclamation)
+    msgbox(format("Pokémon!"))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_FaceRight)
+    waitmovement(LARCH)
+    msgbox(format("Thanks, Clyde."))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_FaceDown)
+    applymovement(CLYDE, LumbridgeTown_Lab_1F_Intro_FaceDown)
+    waitmovement(CLYDE)
+    msgbox(format("Yes, Professor Elm and I agreed that one cannot start a Pokémon journey without a partner of their own."))
+    msgbox(format("So, Professor Elm sent over 3 Pokémon and we would like you to choose one to be your partner."))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepDown)
+    waitmovement(LARCH)
+    special(ChooseStarter)
+	waitstate
+    setflag(FLAG_SYS_POKEMON_GET)
+    bufferleadmonspeciesname(0)
+    msgbox(format("{STR_VAR_1}! It's one of my favorites."))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepBack)
+    waitmovement(LARCH)
+    msgbox(format("Now, before you begin your journey, I do have one small request.\pI have one more gift for you, but it's in Irenia Town.\pWould you be willing to take your new partner to retrieve this parcel for me?"))
+    closemessage
+    delay(48)
+    msgbox(format("Super!\nYou won't regret it!\pIt was delivered to the Irenia Town Mart.\pActually…let's make this a little easier for you, shall we?"))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepDown)
+    waitmovement(LARCH)
+    giveitem(ITEM_TOWN_MAP)
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepBack)
+    waitmovement(LARCH)
+    msgbox(format("If you're unsure where to go, just open your Town Map!"))
+    setvar(VAR_LUMBRIDGEPLAYER_STATE, 2)
+    release
+    end
+}
+
+script LumbridgeTown_Lab_1F_DeliverPackage {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, LumbridgeTown_Lab_1F_Intro_PlayerUp)
+    waitmovement(0)
+    msgbox(format("Hm? Oh hi, {PLAYER}.\nWhat's up?\pThat's right! I asked you to pick up a delivery for me.\pHow'd it go?"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, LumbridgeTown_Lab_1F_Dex_WalkUp)
+    waitmovement(0)
+    setvar(VAR_0x8004, ITEM_PARCEL)
+    call(Common_EventScript_PlayerHandedOverTheItem)
+    applymovement(OBJ_EVENT_ID_PLAYER, LumbridgeTown_Lab_1F_Dex_WalkDown)
+    waitmovement(0)
+    msgbox(format("Super!"))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Dex_FaceAway)
+    waitmovement(LARCH)
+    msgbox(format("Here it is!"))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepDown)
+    waitmovement(LARCH)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(format("{PLAYER} received the Pokédex!"))
+	waitfanfare
+    closemessage
+	setflag(FLAG_SYS_POKEDEX_GET)
+	special(SetUnlockedPokedexFlags)
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepBack)
+    waitmovement(LARCH)
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Dex_WalkInPlaceDown)
+    waitmovement(LARCH)
+    msgbox(format("I'm sure you've heard of the Pokédex by now, so I'll spare you the details.\pWith this high-tech encyclopedia you'll be able to log information on any Pokémon you encounter in the wild.\pEven more information becomes available when you catch the Pokémon!\pAn essential for any Pokémon Trainer.\pSpeaking of catching Pokémon, I haven't given you Poké Balls yet, have I?"))
+    closemessage
+    applymovement(CLYDE, LumbridgeTown_Lab_1F_Intro_FaceLeft)
+    waitmovement(CLYDE)
+    msgbox(format("You haven't."))
+    closemessage
+    applymovement(CLYDE, LumbridgeTown_Lab_1F_Intro_FaceDown)
+    waitmovement(CLYDE)
+    msgbox(format("Well! Poké Balls are a fascinating piece of technology that are used to capture wild Pokémon.\pMy goal as a professor is actually to discover how they were created!\pI intend to make that knowledge public for all to use and learn from.\pAnyway…\pI would like to gift you a handful of Poké Balls to start your journey off."))
+    closemessage
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepDown)
+    waitmovement(LARCH)
+    giveitem(ITEM_POKE_BALL, 20)
+    applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepBack)
+    waitmovement(LARCH)
+    msgbox(format("It looks like you're ready to depart and take on the Azoria Gym Challenge!\pGo, {PLAYER}! Rare Pokémon and new friends await!\pYou should say goodbye to your family before you leave."))
+    setvar(VAR_LUMBRIDGEPLAYER_STATE, 4)
+    release
+    end
+}
+#Pokédex
+
+script LumbridgeTown_Lab_1F_Professor {
+    lock
+    faceplayer
+    switch (var(VAR_LUMBRIDGEPLAYER_STATE))
+    {
+        case 2:
+            msgbox(format("So much to do. Let's see…"))
+        case 4:
+            msgbox(format("Have you said bye to your family yet?"))
+        case 5:
+            msgbox(format("Rare Pokémon and new friends await!"))
+    }
+    release
+    end
+}
+
+script LumbridgeTown_Lab_1F_Assistant {
+    lock
+    faceplayer
+    switch (var(VAR_LUMBRIDGEPLAYER_STATE))
+    {
+        case 2:
+            msgbox("Congratulations, {PLAYER}.")
+        case 4:
+        case 5:
+            msgbox(format("Feel free to stop by during your journey to learn more about our Poké Ball-related discoveries."))
+    }
+    release
+    end
+}
+
+script LumbridgeTown_Lab_1F_Scientist1 {
+    lock
+    faceplayer
+    msgbox(format("Ah! Goodness…y-you startled me.\pI'm trying to put this Poké Ball together but I think I'm missing a piece…"))
+    release
+    end
+}
+
+script LumbridgeTown_Lab_1F_Scientist2 {
+    lock
+    faceplayer
+    switch (var(VAR_LUMBRIDGEPLAYER_STATE))
+    {
+        case 1:
+            msgbox(format("Greetings! You're {PLAYER}, yeah?\pWe've been expecting you!"))
+        case 2:
+            msgbox(format("Congratulations on becoming a Pokémon Trainer, {PLAYER}!"))
+        case 5:
+            msgbox(format("Good luck taking on the Gym Challenge, {PLAYER}!"))
+    }
+    release
+    end
+}
+
+movement LumbridgeTown_Lab_1F_Intro_PlayerUp {
+    walk_up * 7
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Intro_FaceLeft {
+    face_left
+    delay_16
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Intro_FaceDown {
+    face_down
+    delay_16
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Intro_FaceRight {
+    face_right
+    delay_16
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Intro_StepDown {
+    walk_down
+    delay_16
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Intro_StepBack {
+    lock_facing_direction
+    walk_up
+    unlock_facing_direction
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Intro_Exclamation {
+    emote_exclamation_mark
+    delay_16
+    delay_16
+    delay_16
+    delay_16
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Dex_FaceAway {
+    face_up
+    delay_16
+    delay_16
+    delay_16
+    walk_in_place_up
+    delay_16
+    delay_16
+    face_down
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Dex_WalkInPlaceDown {
+    walk_in_place_down
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Dex_WalkUp {
+    walk_up
+    step_end
+}
+
+movement LumbridgeTown_Lab_1F_Dex_WalkDown {
+    lock_facing_direction
+    walk_down
+    unlock_facing_direction
+    step_end
+}
