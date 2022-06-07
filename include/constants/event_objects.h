@@ -246,8 +246,10 @@
 
 #define OBJ_EVENT_GFX_WORKER                     239
 #define OBJ_EVENT_GFX_WORKERDAD                  240
+#define OBJ_EVENT_GFX_LARCH                      241
+#define OBJ_EVENT_GFX_CLYDE                      242
 
-#define NUM_OBJ_EVENT_GFX                        241
+#define NUM_OBJ_EVENT_GFX                        243
 
 
 // These are dynamic object gfx ids.

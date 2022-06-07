@@ -1971,3 +1971,9 @@ $(MISCGFXDIR)/emotes.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/people/worker.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+$(OBJEVENTGFXDIR)/people/larch.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+$(OBJEVENTGFXDIR)/people/clyde.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4

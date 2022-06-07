@@ -40,6 +40,8 @@ const u32 gObjectEventPic_RubySapphireMayNormal[] = INCBIN_U32("graphics/object_
 const u32 gObjectEventPic_RubySapphireMayRunning[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/running.4bpp");
 const u16 gObjectEventPal_RubySapphireMay[] = INCBIN_U16("graphics/object_events/palettes/ruby_sapphire_may.gbapal");
 const u16 gUnusedObjectEventPalette[] = INCBIN_U16("graphics/object_events/palettes/unused_palette.gbapal");
+const u16 gObjectEventPal_Larch[] = INCBIN_U16("graphics/object_events/palettes/npc_larch.gbapal");
+const u16 gObjectEventPal_Clyde[] = INCBIN_U16("graphics/object_events/palettes/npc_clyde.gbapal");
 const u16 gObjectEventPal_Null16[16] = {};
 const u16 gObjectEventPal_Null17[16] = {};
 const u16 gObjectEventPal_Null18[16] = {};
@@ -811,3 +813,5 @@ const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal"
 const u16 gObjectEventPaletteNeonLight[] = INCBIN_U16("graphics/object_events/palettes/neon_light.gbapal");
 
 const u32 gObjectEventPic_Worker[] = INCBIN_U32("graphics/object_events/pics/people/worker.4bpp");
+const u32 gObjectEventPic_Larch[] = INCBIN_U32("graphics/object_events/pics/people/larch.4bpp");
+const u32 gObjectEventPic_Clyde[] = INCBIN_U32("graphics/object_events/pics/people/clyde.4bpp");
