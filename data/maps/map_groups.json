@@ -96,7 +96,8 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125",
-    "LumbridgeTown"
+    "LumbridgeTown",
+    "Route1"
   ],
   "gMapGroup_IndoorLumbridge": [
     "LumbridgeTown_PlayersHouse_2F",

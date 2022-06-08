@@ -1,0 +1,47 @@
+mapscripts Route1_MapScripts {}
+
+script Route1_Sign{
+    lock
+    msgbox(format("Route 1"))
+    release
+    end
+}
+
+script Route1_Lass {
+    lock
+    faceplayer
+    msgbox(format("Route 1 used to be populated largly by Wooloo until all the Poochyena came.\pNow they've all migrated to Route 2."))
+    release
+    end
+}
+
+script Route1_Ledge {
+    lock
+    faceplayer
+    msgbox(format("Want to know something wicked?\pYou can get some sick airtime by hopping over this ledge.\pIt also makes it easier to get to Lumbridge Town!"))
+    release
+    end
+}
+
+script Route1_Potion {
+    lock
+    faceplayer
+    if (flag(FLAG_RECEIVED_POTION_ROUTE1) == FALSE)
+    {
+        msgbox(format("Hello potential customer!\pMy name is Marty and I'm here handing out free Poké Mart samples.\pOne for you!"))
+        waitmessage
+        giveitem(ITEM_POTION)
+        if (var(VAR_RESULT) == FALSE)
+        {
+            msgbox(format("Come back when your bag isn't full, OK?"))
+        } else {
+            setflag(FLAG_RECEIVED_POTION_ROUTE1)
+            msgbox(format("Use that Potion to heal your Pokémon!"))
+        }
+    } else {
+        msgbox(format("Use that Potion to heal your Pokémon!"))
+    }
+    closemessage
+    release
+    end
+}

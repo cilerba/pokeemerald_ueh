@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_UEHLab",
       "border_filepath": "data/layouts/LumbridgeTown_Lab_1F/border.bin",
       "blockdata_filepath": "data/layouts/LumbridgeTown_Lab_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1",
+      "name": "Route1_Layout",
+      "width": 36,
+      "height": 32,
+      "primary_tileset": "gTileset_UEHGeneral",
+      "secondary_tileset": "gTileset_Lumbridge",
+      "border_filepath": "data/layouts/Route1/border.bin",
+      "blockdata_filepath": "data/layouts/Route1/map.bin"
     }
   ]
 }
