@@ -864,7 +864,7 @@ gTileset_UEHGeneral::
 	.4byte gTilesetPalettes_UEHGeneral
 	.4byte gMetatiles_UEHGeneral
 	.4byte gMetatileAttributes_UEHGeneral
-	.4byte NULL
+	.4byte InitTilesetAnim_UEHGeneral
 
 	.align 2
 gTileset_Lumbridge::
