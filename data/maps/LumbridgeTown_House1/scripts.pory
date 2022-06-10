@@ -1,0 +1,9 @@
+mapscripts LumbridgeTown_House1_MapScripts {}
+
+script LumbridgeTown_House1_Woman {
+    lock
+    faceplayer
+    msgbox(format("You know, my husband and I are so glad you and your family moved in.\pIt's great for Tony to have a friend at work now, too."))
+    release
+    end
+}

@@ -103,7 +103,8 @@
   "gMapGroup_IndoorLumbridge": [
     "LumbridgeTown_PlayersHouse_2F",
     "LumbridgeTown_PlayersHouse_1F",
-    "LumbridgeTown_Lab_1F"
+    "LumbridgeTown_Lab_1F",
+    "LumbridgeTown_House1"
   ],
   "gMapGroup_IndoorIrenia": [
     "IreniaTown_PokemonCenter_1F",

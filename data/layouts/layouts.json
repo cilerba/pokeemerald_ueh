@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_UEHPokemon_Mart",
       "border_filepath": "data/layouts/IreniaTown_Mart/border.bin",
       "blockdata_filepath": "data/layouts/IreniaTown_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMBRIDGE_TOWN_HOUSE1",
+      "name": "LumbridgeTown_House1_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_UEHBuilding",
+      "secondary_tileset": "gTileset_UEHGenericBuilding_1",
+      "border_filepath": "data/layouts/LumbridgeTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/LumbridgeTown_House1/map.bin"
     }
   ]
 }

@@ -74,6 +74,13 @@
       "elevation": 0,
       "dest_map": "MAP_LUMBRIDGE_TOWN_LAB_1F",
       "dest_warp_id": 0
+    },
+    {
+      "x": 29,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_LUMBRIDGE_TOWN_HOUSE1",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
