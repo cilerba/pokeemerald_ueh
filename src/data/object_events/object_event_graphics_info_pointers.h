@@ -246,6 +246,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Worker;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerDad;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Larch;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clyde;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFLand;
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
@@ -502,7 +503,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WORKER] =                   &gObjectEventGraphicsInfo_Worker,
     [OBJ_EVENT_GFX_WORKERDAD] =                &gObjectEventGraphicsInfo_WorkerDad,
     [OBJ_EVENT_GFX_LARCH] =                    &gObjectEventGraphicsInfo_Larch,
-    [OBJ_EVENT_GFX_CLYDE] =                    &gObjectEventGraphicsInfo_Clyde
+    [OBJ_EVENT_GFX_CLYDE] =                    &gObjectEventGraphicsInfo_Clyde,
+    [OBJ_EVENT_GFX_SWIMMER_F_LAND] =                    &gObjectEventGraphicsInfo_SwimmerFLand
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

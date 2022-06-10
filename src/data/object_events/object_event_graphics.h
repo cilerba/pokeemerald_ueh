@@ -815,3 +815,4 @@ const u16 gObjectEventPaletteNeonLight[] = INCBIN_U16("graphics/object_events/pa
 const u32 gObjectEventPic_Worker[] = INCBIN_U32("graphics/object_events/pics/people/worker.4bpp");
 const u32 gObjectEventPic_Larch[] = INCBIN_U32("graphics/object_events/pics/people/larch.4bpp");
 const u32 gObjectEventPic_Clyde[] = INCBIN_U32("graphics/object_events/pics/people/clyde.4bpp");
+const u32 gObjectEventPic_SwimmerFLand[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_f_land.4bpp");

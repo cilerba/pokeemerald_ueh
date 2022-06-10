@@ -1977,3 +1977,6 @@ $(OBJEVENTGFXDIR)/people/larch.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/people/clyde.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+$(OBJEVENTGFXDIR)/people/swimmer_f_land.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
