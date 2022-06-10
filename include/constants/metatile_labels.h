@@ -298,7 +298,8 @@
 #define METATILE_Lilycove_Wailmer3         0x2A1
 
 // gTileset_Lumbridge
-#define METATILE_Lumbridge_Door  0x232
+#define METATILE_Lumbridge_Door         0x232
+#define METATILE_Lumbridge_Door_Irenia  0x299
 
 // gTileset_MauvilleGym
 #define METATILE_MauvilleGym_FloorTile        0x21A
@@ -787,6 +788,39 @@
 #define METATILE_TrickHousePuzzle_RedDoorV_Open1              0x242
 #define METATILE_TrickHousePuzzle_RedDoorV_Retracted          0x24A
 #define METATILE_TrickHousePuzzle_Stairs_Down                 0x20B
+
+// gTileset_UEHBuilding
+#define METATILE_UEHBuilding_PC_Off  0x062
+#define METATILE_UEHBuilding_PC_On   0x063
+#define METATILE_UEHBuilding_TV_Off  0x035
+#define METATILE_UEHBuilding_TV_On   0x061
+
+// gTileset_UEHGeneral
+#define METATILE_UEHGeneral_Door_Gym      0x0DA
+#define METATILE_UEHGeneral_Door_Sliding  0x072
+
+// gTileset_UEHPokemon
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile0_Frame0  0x248
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile0_Frame1  0x260
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile0_Frame2  0x278
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile1_Frame0  0x249
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile1_Frame1  0x261
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile1_Frame2  0x279
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile2_Frame0  0x250
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile2_Frame1  0x268
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile2_Frame2  0x280
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile3_Frame0  0x251
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile3_Frame1  0x269
+#define METATILE_UEHPokemon_Center_Escalator1F_Tile3_Frame2  0x281
+#define METATILE_UEHPokemon_Center_Escalator2F_Tile0_Frame0  0x252
+#define METATILE_UEHPokemon_Center_Escalator2F_Tile0_Frame1  0x282
+#define METATILE_UEHPokemon_Center_Escalator2F_Tile0_Frame2  0x26A
+#define METATILE_UEHPokemon_Center_Escalator2F_Tile1_Frame0  0x253
+#define METATILE_UEHPokemon_Center_Escalator2F_Tile1_Frame1  0x283
+#define METATILE_UEHPokemon_Center_Escalator2F_Tile1_Frame2  0x26B
+#define METATILE_UEHPokemon_Center_Escalator2F_Tile2_Frame0  0x25A
+#define METATILE_UEHPokemon_Center_Escalator2F_Tile2_Frame1  0x28A
+#define METATILE_UEHPokemon_Center_Escalator2F_Tile2_Frame2  0x272
 
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228

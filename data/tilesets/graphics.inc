@@ -1829,3 +1829,43 @@ gTilesetPalettes_UEHLab::
 	.align 2
 gTilesetTiles_UEHLab::
 	.incbin "data/tilesets/secondary/uehlab/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_UEHPokemon_Center::
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_center/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_UEHPokemon_Center::
+	.incbin "data/tilesets/secondary/uehpokemon_center/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_UEHPokemon_Mart::
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/uehpokemon_mart/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_UEHPokemon_Mart::
+	.incbin "data/tilesets/secondary/uehpokemon_mart/tiles.4bpp.lz"

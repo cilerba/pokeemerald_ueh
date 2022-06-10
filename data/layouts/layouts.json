@@ -4460,6 +4460,66 @@
       "secondary_tileset": "gTileset_Lumbridge",
       "border_filepath": "data/layouts/Route1/border.bin",
       "blockdata_filepath": "data/layouts/Route1/map.bin"
+    },
+    {
+      "id": "LAYOUT_IRENIA_TOWN",
+      "name": "IreniaTown_Layout",
+      "width": 36,
+      "height": 30,
+      "primary_tileset": "gTileset_UEHGeneral",
+      "secondary_tileset": "gTileset_Lumbridge",
+      "border_filepath": "data/layouts/IreniaTown/border.bin",
+      "blockdata_filepath": "data/layouts/IreniaTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_IRENIA_TOWN_POKEMON_CENTER_1F",
+      "name": "IreniaTown_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_UEHBuilding",
+      "secondary_tileset": "gTileset_UEHPokemon_Center",
+      "border_filepath": "data/layouts/IreniaTown_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/IreniaTown_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_IRENIA_TOWN_POKEMON_CENTER_2F",
+      "name": "IreniaTown_PokemonCenter_2F_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_UEHBuilding",
+      "secondary_tileset": "gTileset_UEHPokemon_Center",
+      "border_filepath": "data/layouts/IreniaTown_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/IreniaTown_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_IRENIA_TOWN_HOUSE1",
+      "name": "IreniaTown_House1_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_UEHBuilding",
+      "secondary_tileset": "gTileset_UEHGenericBuilding_1",
+      "border_filepath": "data/layouts/IreniaTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/IreniaTown_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_IRENIA_TOWN_HOUSE2",
+      "name": "IreniaTown_House2_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_UEHBuilding",
+      "secondary_tileset": "gTileset_UEHGenericBuilding_1",
+      "border_filepath": "data/layouts/IreniaTown_House2/border.bin",
+      "blockdata_filepath": "data/layouts/IreniaTown_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_IRENIA_TOWN_MART",
+      "name": "IreniaTown_Mart_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_UEHBuilding",
+      "secondary_tileset": "gTileset_UEHPokemon_Mart",
+      "border_filepath": "data/layouts/IreniaTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/IreniaTown_Mart/map.bin"
     }
   ]
 }

@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": 4,
       "map": "MAP_LUMBRIDGE_TOWN"
+    },
+    {
+      "direction": "right",
+      "offset": -3,
+      "map": "MAP_IRENIA_TOWN"
     }
   ],
   "object_events": [

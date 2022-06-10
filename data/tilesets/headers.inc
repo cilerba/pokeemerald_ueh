@@ -887,3 +887,25 @@ gTileset_UEHLab::
 	.4byte gMetatiles_UEHLab
 	.4byte gMetatileAttributes_UEHLab
 	.4byte NULL
+
+	.align 2
+gTileset_UEHPokemon_Center::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_UEHPokemon_Center
+	.4byte gTilesetPalettes_UEHPokemon_Center
+	.4byte gMetatiles_UEHPokemon_Center
+	.4byte gMetatileAttributes_UEHPokemon_Center
+	.4byte NULL
+
+	.align 2
+gTileset_UEHPokemon_Mart::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_UEHPokemon_Mart
+	.4byte gTilesetPalettes_UEHPokemon_Mart
+	.4byte gMetatiles_UEHPokemon_Mart
+	.4byte gMetatileAttributes_UEHPokemon_Mart
+	.4byte NULL

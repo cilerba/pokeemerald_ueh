@@ -133,6 +133,10 @@ static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/d
 static const u16 sDoorNullPalette49[16] = {};
 static const u8 sDoorAnimTiles_Lumbridge[] = INCBIN_U8("graphics/door_anims/lumbridge.4bpp");
 static const u16 sDoorNullPalette50[16] = {};
+static const u8 sDoorAnimTiles_Irenia[] = INCBIN_U8("graphics/door_anims/irenia.4bpp");
+static const u16 sDoorNullPalette51[16] = {};
+static const u8 sDoorAnimTiles_SlidingSingle[] = INCBIN_U8("graphics/door_anims/sliding_single.4bpp");
+static const u16 sDoorNullPalette52[16] = {};
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
 {
@@ -240,6 +244,8 @@ static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_Lumbridge[] = {6, 6, 6, 6, 6, 6, 6, 6};
+static const u8 sDoorAnimPalettes_Irenia[] = {12, 12, 12, 12, 12, 12, 12, 12};
+static const u8 sDoorAnimPalettes_Sliding[] = {2, 2, 2, 2, 2, 2, 2, 2};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -296,7 +302,9 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_BattleTent_Door,                              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleTentInterior, sDoorAnimPalettes_BattleTentInterior},
     {METATILE_TrainerHill_Door_Elevator_Lobby,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
     {METATILE_TrainerHill_Door_Elevator_Roof,               DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
-    {METATILE_Lumbridge_Door,                               DOOR_SOUND_NORMAL, 0, sDoorAnimTiles_Lumbridge, sDoorAnimPalettes_Lumbridge},
+    {METATILE_Lumbridge_Door,                               DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_Lumbridge, sDoorAnimPalettes_Lumbridge},
+    {METATILE_Lumbridge_Door_Irenia,                        DOOR_SOUND_NORMAL,  0, sDoorAnimTiles_Irenia, sDoorAnimPalettes_Irenia},
+    {METATILE_UEHGeneral_Door_Sliding,                      DOOR_SOUND_SLIDING, 0, sDoorAnimTiles_SlidingSingle, sDoorAnimPalettes_Sliding},
     {},
 };
 

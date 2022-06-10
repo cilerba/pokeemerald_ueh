@@ -594,3 +594,18 @@ gMetatiles_UEHLab::
 	.align 1
 gMetatileAttributes_UEHLab::
 	.incbin "data/tilesets/secondary/uehlab/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_UEHPokemon_Center::
+	.incbin "data/tilesets/secondary/uehpokemon_center/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_UEHPokemon_Center::
+	.incbin "data/tilesets/secondary/uehpokemon_center/metatile_attributes.bin"
+	.align 1
+gMetatiles_UEHPokemon_Mart::
+	.incbin "data/tilesets/secondary/uehpokemon_mart/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_UEHPokemon_Mart::
+	.incbin "data/tilesets/secondary/uehpokemon_mart/metatile_attributes.bin"

@@ -1,0 +1,23 @@
+const LOCALID_NURSE = 2
+
+mapscripts IreniaTown_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_RESUME {
+        call(CableClub_OnResume)
+    }
+}
+
+script IreniaTown_PokemonCenter_1F_Nurse {
+	setvar(VAR_0x800B, LOCALID_NURSE)
+	call(Common_EventScript_PkmnCenterNurse)
+	waitmessage
+	waitbuttonpress
+	release
+}
+
+script IreniaTown_PokemonCenter_1F_Teala {
+    lock
+    faceplayer
+    msgbox(format("The Cable Club is currently undergoing maintenance.\pWe apologize for any inconvenience."))
+    release
+    end
+}

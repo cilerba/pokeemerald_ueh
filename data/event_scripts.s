@@ -1070,3 +1070,15 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/LumbridgeTown_Lab_1F/scripts.inc"
 
 	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/IreniaTown/scripts.inc"
+
+	.include "data/maps/IreniaTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/IreniaTown_PokemonCenter_2F/scripts.inc"
+
+	.include "data/maps/IreniaTown_House1/scripts.inc"
+
+	.include "data/maps/IreniaTown_House2/scripts.inc"
+
+	.include "data/maps/IreniaTown_Mart/scripts.inc"

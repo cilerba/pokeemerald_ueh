@@ -97,7 +97,8 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "LumbridgeTown",
-    "Route1"
+    "Route1",
+    "IreniaTown"
   ],
   "gMapGroup_IndoorLumbridge": [
     "LumbridgeTown_PlayersHouse_2F",
@@ -105,7 +106,11 @@
     "LumbridgeTown_Lab_1F"
   ],
   "gMapGroup_IndoorIrenia": [
-
+    "IreniaTown_PokemonCenter_1F",
+    "IreniaTown_PokemonCenter_2F",
+    "IreniaTown_House1",
+    "IreniaTown_House2",
+    "IreniaTown_Mart"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

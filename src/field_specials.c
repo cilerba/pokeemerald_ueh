@@ -1025,7 +1025,7 @@ static void PCTurnOnEffect_1(s16 isPcTurnedOn, s8 dx, s8 dy)
     if (isPcTurnedOn)
     {
         if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
-            tileId = METATILE_Building_PC_Off;
+            tileId = METATILE_UEHBuilding_PC_Off;
         else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
             tileId = METATILE_BrendansMaysHouse_BrendanPC_Off;
         else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
@@ -1034,7 +1034,7 @@ static void PCTurnOnEffect_1(s16 isPcTurnedOn, s8 dx, s8 dy)
     else
     {
         if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
-            tileId = METATILE_Building_PC_On;
+            tileId = METATILE_UEHBuilding_PC_On;
         else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
             tileId = METATILE_BrendansMaysHouse_BrendanPC_On;
         else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
@@ -1070,7 +1070,7 @@ static void PCTurnOffEffect(void)
         break;
     }
     if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
-        tileId = METATILE_Building_PC_Off;
+        tileId = METATILE_UEHBuilding_PC_Off;
     else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
         tileId = METATILE_BrendansMaysHouse_BrendanPC_Off;
     else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
