@@ -1,1 +1,67 @@
 mapscripts IreniaTown_Mart_MapScripts {}
+
+script IreniaTown_Mart_Clerk {
+    lock
+    faceplayer
+    switch(var(VAR_LUMBRIDGEPLAYER_STATE))
+    {
+        case 2:
+            msgbox("Welcome!\pHow may I serve you?\pYou're here for a package?\pOne moment.")
+            closemessage
+            applymovement(1, IreniaTown_Mart_ClerkMove)
+            waitmovement(1)
+            giveitem(ITEM_PARCEL, 1)
+            waitmessage
+            msgbox(format("Say hello to Professor Larch for me!"))
+            closemessage
+            setvar(VAR_LUMBRIDGEPLAYER_STATE, 3)
+        case 3:
+            msgbox(format("Say hello to Professor Larch for me!"))
+            closemessage
+        case 4:
+        default:
+            msgbox("Welcome!\pHow may I serve you?")
+            waitmessage
+            pokemart(IreniaTown_Mart_Mart)
+            msgbox(gText_PleaseComeAgain)
+    }
+    release
+    end
+}
+
+raw `
+IreniaTown_Mart_Mart:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_NONE
+	release
+	end
+`
+
+movement IreniaTown_Mart_ClerkMove {
+    face_up
+    delay_16
+    delay_16
+    delay_16
+    face_down
+    delay_16
+    delay_16
+    delay_16
+    face_left
+    delay_16
+    delay_16
+    emote_exclamation_mark
+    delay_16
+    delay_16
+    delay_16
+    walk_left
+    delay_16
+    walk_in_place_left
+    delay_16
+    walk_right
+    face_player
+    step_end
+}

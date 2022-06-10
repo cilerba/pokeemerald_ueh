@@ -21,3 +21,20 @@ script IreniaTown_PokemonCenter_1F_Teala {
     release
     end
 }
+
+script IreniaTown_PokemonCenter_1F_FatMan {
+    lock
+    faceplayer
+    msgbox(format("At every Pokémon Center, you'll find a collection of free books to read through.\pIt's like a mini library!"))
+    release
+    end
+}
+
+script IreniaTown_PokemonCenter_1F_Swimmer {
+    lock
+    faceplayer
+    #TODO: Make her give the player an item
+    msgbox(format("Phew! I just swam all the way through Route 13 to visit Irenia Town.\p"))
+    release
+    end
+}

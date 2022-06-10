@@ -95,6 +95,7 @@ script LumbridgeTown_Lab_1F_DeliverPackage {
     waitmovement(0)
     setvar(VAR_0x8004, ITEM_PARCEL)
     call(Common_EventScript_PlayerHandedOverTheItem)
+    closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, LumbridgeTown_Lab_1F_Dex_WalkDown)
     waitmovement(0)
     msgbox(format("Super!"))
@@ -123,7 +124,7 @@ script LumbridgeTown_Lab_1F_DeliverPackage {
     closemessage
     applymovement(CLYDE, LumbridgeTown_Lab_1F_Intro_FaceDown)
     waitmovement(CLYDE)
-    msgbox(format("Well! Poké Balls are a fascinating piece of technology that are used to capture wild Pokémon.\pMy goal as a professor is actually to discover how they were created!\pI intend to make that knowledge public for all to use and learn from.\pAnyway…\pI would like to gift you a handful of Poké Balls to start your journey off."))
+    msgbox(format("Well! Poké Balls are a fascinating piece of technology that are used to capture wild Pokémon.\pMy goal as a professor is actually to discover how they were created!\pI intend to make that knowledge public for all to use and learn from.\pI would like to gift you a handful of Poké Balls to start your journey off."))
     closemessage
     applymovement(LARCH, LumbridgeTown_Lab_1F_Intro_StepDown)
     waitmovement(LARCH)

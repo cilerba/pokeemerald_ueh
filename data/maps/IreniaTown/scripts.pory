@@ -1,1 +1,49 @@
 mapscripts IreniaTown_MapScripts {}
+
+script IreniaTown_TownSign {
+    lock
+    msgbox("Irenia Town")
+    release
+    end
+}
+
+script IreniaTown_StatueSign {
+    lock
+    msgbox(format("Our Guardian Lugia's Shrine"))
+    release
+    end
+}
+
+script IreniaTown_NPCShrine {
+    lock
+    faceplayer
+    msgbox(format("My son was sick many years ago.\pI came to this statue every morning to pray to our Guardian Lugia.\pOne morning I awoke to a loud cry and strong winds.\pUpon exiting my home, I saw it. Our Guardian Lugia.\pIt heard us.\pThe next day my son was healthy and back to normal.\pEver since that day, I come here every morning to give thanks to our Guardian Lugia."))
+    release
+    end
+}
+
+script IreniaTown_NPCWater {
+    lock
+    faceplayer
+    msgbox(format("Do you ever wonder what's on the other side of this water?\pReally makes you think…"))
+    release
+    end
+}
+
+script IreniaTown_NPCLass {
+    lock
+    faceplayer
+    msgbox(format("I recently read Professor Larch's article on her latest research.\pDid you know, in ancient times, Poké Balls weren't used at all?\pI wonder how Pokémon Trainers caught their Pokémon."))
+    release
+    end
+}
+
+script IreniaTown_CantLeave {
+    lock
+    msgbox(format("I need to deliver Professor Larch's package."))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+    end
+}

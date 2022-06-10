@@ -95,6 +95,7 @@ LumbridgeTown_Lab_1F_DeliverPackage::
 	waitmovement 0
 	setvar VAR_0x8004, ITEM_PARCEL
 	call Common_EventScript_PlayerHandedOverTheItem
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LumbridgeTown_Lab_1F_Dex_WalkDown
 	waitmovement 0
 	msgbox LumbridgeTown_Lab_1F_DeliverPackage_Text_1
@@ -402,7 +403,6 @@ LumbridgeTown_Lab_1F_DeliverPackage_Text_6:
 	.string "discover how they were created!\p"
 	.string "I intend to make that knowledge public\n"
 	.string "for all to use and learn from.\p"
-	.string "Anyway…\p"
 	.string "I would like to gift you a handful of\n"
 	.string "Poké Balls to start your journey off.$"
 

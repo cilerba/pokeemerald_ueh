@@ -1,1 +1,9 @@
 mapscripts IreniaTown_House2_MapScripts {}
+
+script IreniaTown_House2_NPCMan {
+    lock
+    faceplayer
+    msgbox(format("Irenia Town was founded decades ago.\pThis area was where Lugia first visited Azoria.\pSince that moment, we set out to create a town where everyone can join together in prayer to thank Lugia for all it's done for us."))
+    release
+    end
+}

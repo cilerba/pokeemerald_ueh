@@ -1,1 +1,18 @@
 mapscripts IreniaTown_House1_MapScripts {}
+
+script IreniaTown_House1_NPCWoman {
+    lock
+    faceplayer
+    msgbox(format("I was walking with my Zigzagoon and found it holding an item.\pI wonder if it's related to its Pickup ability."))
+    release
+    end
+}
+
+script IreniaTown_House1_NPCChild {
+    lock
+    faceplayer
+    bufferleadmonspeciesname(0)
+    msgbox(format("Wow! Is that a\n{STR_VAR_1}?\pThat's so cool! I'm going to have my own Pokémon one day."))
+    release
+    end
+}
