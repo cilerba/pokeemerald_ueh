@@ -10,6 +10,7 @@ LumbridgeTown_PlayersHouse_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 LumbridgeTown_PlayersHouse_1F_Frame_0::
 	setrespawn HEAL_LOCATION_LUMBRIDGE_TOWN_PLAYERS_HOUSE_2F
 	lock
+	playse SE_PIN
 	applymovement 1, LumbridgeTown_PlayersHouse_1F_Mom_InitMove
 	waitmovement 1
 	msgbox LumbridgeTown_PlayersHouse_1F_Frame_0_Text_0

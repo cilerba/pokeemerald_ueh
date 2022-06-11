@@ -1,0 +1,41 @@
+mapscripts Route2_MapScripts {}
+
+script Route2_Trainer_BugCatcher {
+    trainerbattle_single(TRAINER_JULIAN, Route2_Trainer_BugCatcherIntro, Route2_Trainer_BugCatcherDefeated)
+    msgbox(format("Test"))
+    closemessage
+    release
+    end
+}
+
+text Route2_Trainer_BugCatcherIntro {
+    format("")
+}
+
+text Route2_Trainer_BugCatcherDefeated {
+    format("")
+}
+
+script Route2_Trainer_Lass {
+    trainerbattle_single(TRAINER_CLAUDIA, Route2_Trainer_LassIntro, Route2_Trainer_LassDefeated)
+    msgbox(format("Test"))
+    closemessage
+    release
+    end
+}
+
+text Route2_Trainer_LassIntro {
+    format("")
+}
+
+text Route2_Trainer_LassDefeated {
+    format("")
+}
+
+script Route2_Beauty {
+    lock
+    faceplayer
+    msgbox(format("I like the view from here.\pI get to watch all the Pokémon battles that take place down the hill."))
+    release
+    end
+}

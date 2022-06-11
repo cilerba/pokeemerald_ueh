@@ -1084,3 +1084,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/IreniaTown_Mart/scripts.inc"
 
 	.include "data/maps/LumbridgeTown_House1/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"

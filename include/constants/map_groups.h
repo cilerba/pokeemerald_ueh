@@ -66,6 +66,7 @@
 #define MAP_LUMBRIDGE_TOWN      (57 | (0 << 8))
 #define MAP_ROUTE1              (58 | (0 << 8))
 #define MAP_IRENIA_TOWN         (59 | (0 << 8))
+#define MAP_ROUTE2              (60 | (0 << 8))
 
 // gMapGroup_IndoorLumbridge
 #define MAP_LUMBRIDGE_TOWN_PLAYERS_HOUSE_2F (0 | (1 << 8))
@@ -608,7 +609,5 @@
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (35 << 8))
 
 #define MAP_GROUPS_COUNT 36
-
-// static const u8 MAP_GROUP_COUNT[] = {60, 4, 5, 5, 5, 6, 7, 8, 9, 7, 7, 14, 8, 17, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 1, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

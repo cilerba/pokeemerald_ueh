@@ -4465,7 +4465,7 @@
       "id": "LAYOUT_IRENIA_TOWN",
       "name": "IreniaTown_Layout",
       "width": 36,
-      "height": 30,
+      "height": 36,
       "primary_tileset": "gTileset_UEHGeneral",
       "secondary_tileset": "gTileset_Lumbridge",
       "border_filepath": "data/layouts/IreniaTown/border.bin",
@@ -4530,6 +4530,16 @@
       "secondary_tileset": "gTileset_UEHGenericBuilding_1",
       "border_filepath": "data/layouts/LumbridgeTown_House1/border.bin",
       "blockdata_filepath": "data/layouts/LumbridgeTown_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2",
+      "name": "Route2_Layout",
+      "width": 48,
+      "height": 38,
+      "primary_tileset": "gTileset_UEHGeneral",
+      "secondary_tileset": "gTileset_Lumbridge",
+      "border_filepath": "data/layouts/Route2/border.bin",
+      "blockdata_filepath": "data/layouts/Route2/map.bin"
     }
   ]
 }
