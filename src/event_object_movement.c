@@ -480,6 +480,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_CLYDE                   0x1129
 #define OBJ_EVENT_PAL_TAG_BUGCATCHER              0x1130
 #define OBJ_EVENT_PAL_TAG_LASS                    0x1131
+#define OBJ_EVENT_PAL_TAG_BEAUTY                  0x1132
 #define OBJ_EVENT_PAL_TAG_LIGHT                   0x8001
 #define OBJ_EVENT_PAL_TAG_LIGHT_2                 0x8002
 #define OBJ_EVENT_PAL_TAG_EMOTES                  0x8003
@@ -538,6 +539,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Clyde, OBJ_EVENT_PAL_TAG_CLYDE},
     {gObjectEventPal_BugCatcher, OBJ_EVENT_PAL_TAG_BUGCATCHER},
     {gObjectEventPal_Lass, OBJ_EVENT_PAL_TAG_LASS},
+    {gObjectEventPal_Beauty, OBJ_EVENT_PAL_TAG_BEAUTY},
     {gObjectEventPaletteLight, OBJ_EVENT_PAL_TAG_LIGHT},
     {gObjectEventPaletteLight2, OBJ_EVENT_PAL_TAG_LIGHT_2},
     {gObjectEventPaletteEmotes, OBJ_EVENT_PAL_TAG_EMOTES},

@@ -44,6 +44,7 @@ const u16 gObjectEventPal_Larch[] = INCBIN_U16("graphics/object_events/palettes/
 const u16 gObjectEventPal_Clyde[] = INCBIN_U16("graphics/object_events/palettes/npc_clyde.gbapal");
 const u16 gObjectEventPal_BugCatcher[] = INCBIN_U16("graphics/object_events/palettes/npc_bugcatcher.gbapal");
 const u16 gObjectEventPal_Lass[] = INCBIN_U16("graphics/object_events/palettes/npc_lass.gbapal");
+const u16 gObjectEventPal_Beauty[] = INCBIN_U16("graphics/object_events/palettes/npc_beauty.gbapal");
 const u16 gObjectEventPal_Null16[16] = {};
 const u16 gObjectEventPal_Null17[16] = {};
 const u16 gObjectEventPal_Null18[16] = {};
