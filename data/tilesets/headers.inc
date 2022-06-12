@@ -909,3 +909,14 @@ gTileset_UEHPokemon_Mart::
 	.4byte gMetatiles_UEHPokemon_Mart
 	.4byte gMetatileAttributes_UEHPokemon_Mart
 	.4byte NULL
+
+	.align 2
+gTileset_UEHForest::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_UEHForest
+	.4byte gTilesetPalettes_UEHForest
+	.4byte gMetatiles_UEHForest
+	.4byte gMetatileAttributes_UEHForest
+	.4byte NULL

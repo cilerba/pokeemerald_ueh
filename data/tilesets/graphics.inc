@@ -1869,3 +1869,23 @@ gTilesetPalettes_UEHPokemon_Mart::
 	.align 2
 gTilesetTiles_UEHPokemon_Mart::
 	.incbin "data/tilesets/secondary/uehpokemon_mart/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_UEHForest::
+	.incbin "data/tilesets/secondary/uehforest/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/uehforest/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_UEHForest::
+	.incbin "data/tilesets/secondary/uehforest/tiles.4bpp.lz"

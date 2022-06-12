@@ -4540,6 +4540,16 @@
       "secondary_tileset": "gTileset_Lumbridge",
       "border_filepath": "data/layouts/Route2/border.bin",
       "blockdata_filepath": "data/layouts/Route2/map.bin"
+    },
+    {
+      "id": "LAYOUT_COGU_WOODS",
+      "name": "CoguWoods_Layout",
+      "width": 50,
+      "height": 52,
+      "primary_tileset": "gTileset_UEHGeneral",
+      "secondary_tileset": "gTileset_UEHForest",
+      "border_filepath": "data/layouts/CoguWoods/border.bin",
+      "blockdata_filepath": "data/layouts/CoguWoods/map.bin"
     }
   ]
 }

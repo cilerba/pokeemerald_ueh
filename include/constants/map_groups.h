@@ -417,6 +417,7 @@
 #define MAP_TERRA_CAVE_END                           (105 | (26 << 8))
 #define MAP_ALTERING_CAVE                            (106 | (26 << 8))
 #define MAP_METEOR_FALLS_STEVENS_CAVE                (107 | (26 << 8))
+#define MAP_COGU_WOODS                               (108 | (26 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (27 << 8))

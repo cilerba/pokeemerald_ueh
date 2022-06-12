@@ -609,3 +609,10 @@ gMetatiles_UEHPokemon_Mart::
 	.align 1
 gMetatileAttributes_UEHPokemon_Mart::
 	.incbin "data/tilesets/secondary/uehpokemon_mart/metatile_attributes.bin"
+	.align 1
+gMetatiles_UEHForest::
+	.incbin "data/tilesets/secondary/uehforest/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_UEHForest::
+	.incbin "data/tilesets/secondary/uehforest/metatile_attributes.bin"
