@@ -4132,6 +4132,8 @@ static void Cmd_getexp(void)
                 gBattleMoveDamage = T1_READ_32(&gBattleResources->bufferB[gActiveBattler][2]);
                 AdjustFriendship(&gPlayerParty[gBattleStruct->expGetterMonId], FRIENDSHIP_EVENT_GROW_LEVEL);
 
+                BattleAnimateBackSprite(&gSprites[gBattlerSpriteIds[gActiveBattler]], gBattleMons[gActiveBattler].species);
+
                 // update battle mon structure after level up
                 if (gBattlerPartyIndexes[0] == gBattleStruct->expGetterMonId && gBattleMons[0].hp)
                     battlerId = 0;
