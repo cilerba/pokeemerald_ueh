@@ -140,44 +140,48 @@ LumbridgeTown_Lab_1F_DeliverPackage::
 LumbridgeTown_Lab_1F_Professor::
 	lock
 	faceplayer
+	namebox LumbridgeTown_Lab_1F_Professor_Text_0
 	switch VAR_LUMBRIDGEPLAYER_STATE
 	case 2, LumbridgeTown_Lab_1F_Professor_3
 	case 4, LumbridgeTown_Lab_1F_Professor_4
 	case 5, LumbridgeTown_Lab_1F_Professor_5
 LumbridgeTown_Lab_1F_Professor_1:
+	hidenamebox
 	release
 	end
 
 LumbridgeTown_Lab_1F_Professor_3:
-	msgbox LumbridgeTown_Lab_1F_Professor_Text_0
-	goto LumbridgeTown_Lab_1F_Professor_1
-
-LumbridgeTown_Lab_1F_Professor_4:
 	msgbox LumbridgeTown_Lab_1F_Professor_Text_1
 	goto LumbridgeTown_Lab_1F_Professor_1
 
-LumbridgeTown_Lab_1F_Professor_5:
+LumbridgeTown_Lab_1F_Professor_4:
 	msgbox LumbridgeTown_Lab_1F_Professor_Text_2
+	goto LumbridgeTown_Lab_1F_Professor_1
+
+LumbridgeTown_Lab_1F_Professor_5:
+	msgbox LumbridgeTown_Lab_1F_Professor_Text_3
 	goto LumbridgeTown_Lab_1F_Professor_1
 
 
 LumbridgeTown_Lab_1F_Assistant::
 	lock
 	faceplayer
+	namebox LumbridgeTown_Lab_1F_Assistant_Text_0
 	switch VAR_LUMBRIDGEPLAYER_STATE
 	case 2, LumbridgeTown_Lab_1F_Assistant_3
 	case 4, LumbridgeTown_Lab_1F_Assistant_4
 	case 5, LumbridgeTown_Lab_1F_Assistant_4
 LumbridgeTown_Lab_1F_Assistant_1:
+	hidenamebox
 	release
 	end
 
 LumbridgeTown_Lab_1F_Assistant_3:
-	msgbox LumbridgeTown_Lab_1F_Assistant_Text_0
+	msgbox LumbridgeTown_Lab_1F_Assistant_Text_1
 	goto LumbridgeTown_Lab_1F_Assistant_1
 
 LumbridgeTown_Lab_1F_Assistant_4:
-	msgbox LumbridgeTown_Lab_1F_Assistant_Text_1
+	msgbox LumbridgeTown_Lab_1F_Assistant_Text_2
 	goto LumbridgeTown_Lab_1F_Assistant_1
 
 
@@ -415,18 +419,24 @@ LumbridgeTown_Lab_1F_DeliverPackage_Text_7:
 	.string "before you leave.$"
 
 LumbridgeTown_Lab_1F_Professor_Text_0:
-	.string "So much to do. Let's see…$"
+	.string "Larch$"
 
 LumbridgeTown_Lab_1F_Professor_Text_1:
-	.string "Have you said bye to your family yet?$"
+	.string "So much to do. Let's see…$"
 
 LumbridgeTown_Lab_1F_Professor_Text_2:
+	.string "Have you said bye to your family yet?$"
+
+LumbridgeTown_Lab_1F_Professor_Text_3:
 	.string "Rare Pokémon and new friends await!$"
 
 LumbridgeTown_Lab_1F_Assistant_Text_0:
-	.string "Congratulations, {PLAYER}.$"
+	.string "Clyde$"
 
 LumbridgeTown_Lab_1F_Assistant_Text_1:
+	.string "Congratulations, {PLAYER}.$"
+
+LumbridgeTown_Lab_1F_Assistant_Text_2:
 	.string "Feel free to stop by during your\n"
 	.string "journey to learn more about our Poké\l"
 	.string "Ball-related discoveries.$"

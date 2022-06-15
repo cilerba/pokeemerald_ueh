@@ -141,6 +141,7 @@ script LumbridgeTown_Lab_1F_DeliverPackage {
 script LumbridgeTown_Lab_1F_Professor {
     lock
     faceplayer
+    namebox("Larch")
     switch (var(VAR_LUMBRIDGEPLAYER_STATE))
     {
         case 2:
@@ -150,6 +151,7 @@ script LumbridgeTown_Lab_1F_Professor {
         case 5:
             msgbox(format("Rare Pokémon and new friends await!"))
     }
+    hidenamebox
     release
     end
 }
@@ -157,6 +159,7 @@ script LumbridgeTown_Lab_1F_Professor {
 script LumbridgeTown_Lab_1F_Assistant {
     lock
     faceplayer
+    namebox("Clyde")
     switch (var(VAR_LUMBRIDGEPLAYER_STATE))
     {
         case 2:
@@ -165,6 +168,7 @@ script LumbridgeTown_Lab_1F_Assistant {
         case 5:
             msgbox(format("Feel free to stop by during your journey to learn more about our Poké Ball-related discoveries."))
     }
+    hidenamebox
     release
     end
 }

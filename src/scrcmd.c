@@ -51,6 +51,7 @@
 #include "window.h"
 #include "constants/event_objects.h"
 #include "crafting.h"
+#include "field_name_box.h"
 
 typedef u16 (*SpecialFunc)(void);
 typedef void (*NativeFunc)(void);
@@ -2395,4 +2396,19 @@ bool8 ScrCmd_craft(struct ScriptContext *ctx)
     CreateCraftingMenu(ptr);
     ScriptContext1_Stop();
     return TRUE;
+}
+
+bool8 ScrCmd_namebox(struct ScriptContext *ctx) {
+    const u8 *name = (const u8 *)ScriptReadWord(ctx);
+
+    if (name == NULL)
+        name = (const u8 *)ctx->data[0];
+    ShowFieldName(name);
+    return FALSE;
+}
+
+bool8 ScrCmd_hidenamebox(struct ScriptContext *ctx) {
+    if(IsNameboxDisplayed())
+        ClearNamebox();
+    return FALSE;
 }
