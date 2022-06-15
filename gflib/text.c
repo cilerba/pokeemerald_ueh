@@ -1142,7 +1142,8 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             DecompressGlyph_Small(currChar, textPrinter->japanese);
             break;
         case FONT_NORMAL:
-            DecompressGlyph_Normal(currChar, textPrinter->japanese);
+            DecompressGlyph_Short(currChar, textPrinter->japanese);
+            //DecompressGlyph_Normal(currChar, textPrinter->japanese);
             break;
         case FONT_SHORT:
         case FONT_SHORT_COPY_1:
