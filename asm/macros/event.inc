@@ -1741,6 +1741,12 @@
   .4byte \func
   .endm
 
+	@ Opens the Crafting system, offering the specified items
+	@ Products should be a list of .2byte item values preceded by an .align 2
+	.macro craft items:req
+	.byte 0xe4
+	.4byte \items
+	.endm
 @ Supplementary
 
 	.macro goto_if_unset flag:req, dest:req

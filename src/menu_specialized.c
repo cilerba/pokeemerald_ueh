@@ -25,6 +25,9 @@
 #include "window.h"
 #include "constants/songs.h"
 #include "gba/io_reg.h"
+#include "item.h"
+#include "constants/items.h"
+#include "recipes.h"
 
 extern const struct CompressedSpriteSheet gMonFrontPicTable[];
 
@@ -36,6 +39,8 @@ static void ConditionGraph_CalcRightHalf(struct ConditionGraph *);
 static void ConditionGraph_CalcLeftHalf(struct ConditionGraph *);
 static void MoveRelearnerCursorCallback(s32, bool8, struct ListMenu *);
 static void MoveRelearnerDummy(void);
+static void CraftCursorCallback(s32, bool8, struct ListMenu *);
+static void CraftDummy(void);
 static void SetNextConditionSparkle(struct Sprite *);
 static void SpriteCB_ConditionSparkle(struct Sprite *);
 static void ShowAllConditionSparkles(struct Sprite *);
@@ -187,6 +192,91 @@ static const struct ListMenuTemplate sMoveRelearnerMovesListTemplate =
     .itemVerticalPadding = 0,
     .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
     .fontId = FONT_NORMAL,
+    .cursorKind = 0
+};
+
+
+static const struct WindowTemplate sCraftWindowTemplates[] =
+{
+    { // Left Window - No Context
+        .bg = 1,
+        .tilemapLeft = 1,
+        .tilemapTop = 1,
+        .width = 16,
+        .height = 12,
+        .paletteNum = 0xF,
+        .baseBlock = 0xA
+    },
+    { // Left Window - Context
+        .bg = 1,
+        .tilemapLeft = 1,
+        .tilemapTop = 1,
+        .width = 10,
+        .height = 12,
+        .paletteNum = 0xF,
+        .baseBlock = 0x18A
+    },
+    { // Right Window
+        .bg = 1,
+        .tilemapLeft = 13,
+        .tilemapTop = 1,
+        .width = 16,
+        .height = 12,
+        .paletteNum = 0xF,
+        .baseBlock = 0xCA
+    },
+    { // Bottom Window
+        .bg = 1,
+        .tilemapLeft = 4,
+        .tilemapTop = 15,
+        .width = 22,
+        .height = 4,
+        .paletteNum = 0xF,
+        .baseBlock = 0x202
+    },
+    { // Yes/No Window
+        .bg = 0,
+        .tilemapLeft = 22,
+        .tilemapTop = 8,
+        .width = 5,
+        .height = 4,
+        .paletteNum = 0xF,
+        .baseBlock = 0x25A
+    },
+    DUMMY_WIN_TEMPLATE
+};
+
+static const struct WindowTemplate sCraftYesNoMenuTemplate =
+{
+    .bg = 0,
+    .tilemapLeft = 22,
+    .tilemapTop = 8,
+    .width = 5,
+    .height = 4,
+    .paletteNum = 0xF,
+    .baseBlock = 0x25A
+};
+
+
+static const struct ListMenuTemplate sCraftItemsListTemplate =
+{
+    .items = NULL,
+    .moveCursorFunc = CraftCursorCallback,
+    .itemPrintFunc = NULL,
+    .totalItems = 0,
+    .maxShowed = 0,
+    .windowId = 1,
+    .header_X = 0,
+    .item_X = 8,
+    .cursor_X = 0,
+    .upText_Y = 1,
+    .cursorPal = 2,
+    .fillValue = 1,
+    .cursorShadowPal = 3,
+    .lettersSpacing = 0,
+    .itemVerticalPadding = 0,
+    .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
+    .fontId = FONT_NARROW,
     .cursorKind = 0
 };
 
@@ -874,6 +964,125 @@ bool16 MoveRelearnerRunTextPrinters(void)
 void MoveRelearnerCreateYesNoMenu(void)
 {
     CreateYesNoMenu(&sMoveRelearnerYesNoMenuTemplate, 1, 0xE, 0);
+}
+
+//----------------
+// Crafting
+//----------------
+
+void InitCraftWindows(bool8 useContextWindow)
+{
+    u8 i;
+
+    InitWindows(sCraftWindowTemplates);
+    DeactivateAllTextPrinters();
+    LoadUserWindowBorderGfx(1, 1, 0xE0);
+    LoadPalette(gStandardMenuPalette, 0xF0, 0x20);
+
+    for (i = 0; i < ARRAY_COUNT(sCraftWindowTemplates) - 1; i++)
+        FillWindowPixelBuffer(i, PIXEL_FILL(1));
+
+    PutWindowTilemap(1);
+    DrawStdFrameWithCustomTileAndPalette(1, 0, 1, 0xE);
+    PutWindowTilemap(2);
+    PutWindowTilemap(3);
+    DrawStdFrameWithCustomTileAndPalette(2, 0, 1, 0xE);
+    DrawStdFrameWithCustomTileAndPalette(3, 0, 1, 0xE);
+    CraftDummy();
+    ScheduleBgCopyTilemapToVram(1);
+}
+
+static void CraftDummy(void)
+{
+
+}
+
+u8 LoadCraftItemsList(const struct ListMenuItem *items, u16 numChoices)
+{
+    gMultiuseListMenuTemplate = sCraftItemsListTemplate;
+    gMultiuseListMenuTemplate.totalItems = numChoices;
+    gMultiuseListMenuTemplate.items = items;
+
+    if (numChoices < 6)
+        gMultiuseListMenuTemplate.maxShowed = numChoices;
+    else
+        gMultiuseListMenuTemplate.maxShowed = 6;
+
+    return gMultiuseListMenuTemplate.maxShowed;
+}
+
+void CraftLoadMaterials(u32 chosenItem)
+{
+    s32 i;
+    const struct ItemRecipe *recipe;
+    const u8 *str;
+    u8 pocket;
+    u16 itemId;
+    u16 itemBagIndex;
+    u8 buffer[32];
+
+    FillWindowPixelBuffer(2, PIXEL_FILL(1));
+
+    if (chosenItem == LIST_CANCEL)
+    {
+        CopyWindowToVram(2, COPYWIN_GFX);
+        return;
+    }
+
+    recipe = &gRecipes[chosenItem];
+
+    for (i = 0; i < MATERIAL_LENGTH; i++)
+    {
+        if (recipe->materials[i].itemId != ITEM_NONE)
+        {
+            itemId = recipe->materials[i].itemId;
+
+            CopyItemName(recipe->materials[i].itemId, gStringVar1);
+            str = gStringVar1;
+            AddTextPrinterParameterized(2, FONT_NARROW, str, 0, i * 16, 0, NULL);
+
+
+            ConvertIntToDecimalStringN(gStringVar2,
+                                       CheckBagQuantity(itemId),
+                                       STR_CONV_MODE_RIGHT_ALIGN, 2);
+            StringAppend(gStringVar2, gText_Slash);
+            AddTextPrinterParameterized(2, FONT_NARROW, gStringVar2, 0x62, i * 16, 0, NULL);
+
+            ConvertIntToDecimalStringN(gStringVar3,
+                                       recipe->materials[i].quantity,
+                                       STR_CONV_MODE_RIGHT_ALIGN, 2);
+            AddTextPrinterParameterized(2, FONT_NARROW, gStringVar3, 0x76, i * 16, 0, NULL);
+        }
+    }    
+}
+
+static void CraftCursorCallback(s32 itemIndex, bool8 onInit, struct ListMenu *list)
+{
+    if (onInit != TRUE)
+        PlaySE(SE_SELECT);
+    CraftLoadMaterials(itemIndex);
+    //MoveRelearnerMenuLoadContestMoveDescription(itemIndex);
+}
+
+void CraftPrintText(u8 *str)
+{
+    u8 speed;
+
+    FillWindowPixelBuffer(3, PIXEL_FILL(1));
+    gTextFlags.canABSpeedUpPrint = TRUE;
+    speed = GetPlayerTextSpeedDelay();
+    AddTextPrinterParameterized2(3, FONT_NORMAL, str, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, 3);
+}
+
+bool16 CraftRunTextPrinters(void)
+{
+    RunTextPrinters();
+    return IsTextPrinterActive(3);
+}
+
+void CraftCreateYesNoMenu(void)
+{
+    CreateYesNoMenu(&sCraftYesNoMenuTemplate, 1, 0xE, 0);
 }
 
 //----------------
