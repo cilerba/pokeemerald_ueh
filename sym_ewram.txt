@@ -150,4 +150,5 @@
 	.include "src/rayquaza_scene.o"
 	.include "src/debug.o"
 	.include "src/crafting.o"
+	.include "src/mugshot.o"
 	.include "src/field_name_box.o"

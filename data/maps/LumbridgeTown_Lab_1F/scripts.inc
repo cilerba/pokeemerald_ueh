@@ -141,11 +141,14 @@ LumbridgeTown_Lab_1F_Professor::
 	lock
 	faceplayer
 	namebox LumbridgeTown_Lab_1F_Professor_Text_0
+	setvar VAR_0x8000, MUGSHOT_LARCH
+	callnative DrawMugshot
 	switch VAR_LUMBRIDGEPLAYER_STATE
 	case 2, LumbridgeTown_Lab_1F_Professor_3
 	case 4, LumbridgeTown_Lab_1F_Professor_4
 	case 5, LumbridgeTown_Lab_1F_Professor_5
 LumbridgeTown_Lab_1F_Professor_1:
+	callnative ClearMugshot
 	hidenamebox
 	release
 	end
@@ -167,11 +170,14 @@ LumbridgeTown_Lab_1F_Assistant::
 	lock
 	faceplayer
 	namebox LumbridgeTown_Lab_1F_Assistant_Text_0
+	setvar VAR_0x8000, MUGSHOT_CLYDE
+	callnative DrawMugshot
 	switch VAR_LUMBRIDGEPLAYER_STATE
 	case 2, LumbridgeTown_Lab_1F_Assistant_3
 	case 4, LumbridgeTown_Lab_1F_Assistant_4
 	case 5, LumbridgeTown_Lab_1F_Assistant_4
 LumbridgeTown_Lab_1F_Assistant_1:
+	callnative ClearMugshot
 	hidenamebox
 	release
 	end
