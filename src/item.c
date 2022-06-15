@@ -952,3 +952,58 @@ u8 ItemId_GetFlingPower(u16 itemId)
 {
     return gItems[SanitizeItemId(itemId)].flingPower;
 }
+
+u8 GetAmountOfItems(u8 pocket)
+{
+    int i;
+
+    for (i = 0; i < gBagPockets[pocket].capacity; i++)
+    {
+        if (gBagPockets[pocket].itemSlots[i].itemId == ITEM_NONE)
+        {
+            break;
+        }
+    }
+
+    return i;
+}
+
+u8 GetItemBagIndex(u16 itemId, u8 pocket)
+{
+    u8 i;
+    
+    CompactItemsInBagPocket(&gBagPockets[ITEMS_POCKET]);
+    CompactItemsInBagPocket(&gBagPockets[BALLS_POCKET]);
+    CompactItemsInBagPocket(&gBagPockets[KEYITEMS_POCKET]);
+
+    for (i = 0; i < gBagPockets[pocket].capacity; i++)
+    {
+        if (gBagPockets[pocket].itemSlots[i].itemId == itemId)
+        {
+            break;
+        }
+    }
+
+    return i;
+}
+
+u16 CheckBagQuantity(u16 itemId)
+{
+    u8 i;
+    u8 pocket = ItemId_GetPocket(itemId) - 1;
+
+    // Check for item slots that contain the item
+    for (i = 0; i < gBagPockets[pocket].capacity; i++)
+    {
+        if (gBagPockets[pocket].itemSlots[i].itemId == itemId)
+        {
+            u16 quantity;
+            // Does this item slot contain enough of the item?
+            quantity = GetBagItemQuantity(&gBagPockets[pocket].itemSlots[i].quantity);
+            
+            return quantity;
+        }
+    }
+
+    return 0;
+}
