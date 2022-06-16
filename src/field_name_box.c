@@ -159,7 +159,7 @@ static void AddTextPrinterForName() {
     printer.currentChar = gStringVar3;
     printer.windowId = sNameboxWindowId;
     printer.fontId = 1;
-    printer.x = 5; 
+    printer.x = 8; 
     printer.y = 0;
     printer.currentX = printer.x;
     printer.currentY = printer.y;
