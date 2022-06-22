@@ -2393,7 +2393,7 @@ bool8 ScrCmd_craft(struct ScriptContext *ctx)
 {
     const void *ptr = (void *)ScriptReadWord(ctx);
 
-    CreateCraftingMenu(ptr);
+    CraftingInit(ptr);
     ScriptContext1_Stop();
     return TRUE;
 }

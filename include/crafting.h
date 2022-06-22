@@ -3,7 +3,7 @@
 
 
 void OpenCraftingMenu(void);
-void CreateCraftingMenu(const u16 *);
+void CraftingInit(const u16 *);
 bool8 CanCraftItem(u16 itemId);
 
 #endif //GUARD_CRAFTING_H

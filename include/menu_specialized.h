@@ -123,14 +123,6 @@ void MoveRelearnerCreateYesNoMenu(void);
 u8 LoadMoveRelearnerMovesList(const struct ListMenuItem *items, u16 numChoices);
 void InitMoveRelearnerWindows(bool8 useContextWindow);
 
-// Crafting
-void CraftPrintText(u8 *str);
-bool16 CraftRunTextPrinters(void);
-void CraftCreateYesNoMenu(void);
-u8 LoadCraftItemsList(const struct ListMenuItem *items, u16 numChoices);
-void InitCraftWindows(bool8 useContextWindow);
-void CraftLoadMaterials(u32 chosenItem);
-
 // Level up window
 void DrawLevelUpWindowPg1(u16 windowId, u16 *statsBefore, u16 *statsAfter, u8 bgClr, u8 fgClr, u8 shadowClr);
 void DrawLevelUpWindowPg2(u16 windowId, u16 *currStats, u8 bgClr, u8 fgClr, u8 shadowClr);
