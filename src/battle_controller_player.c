@@ -307,6 +307,14 @@ static void HandleInputChooseAction(void)
     }
     else if (JOY_NEW(B_BUTTON) || gPlayerDpadHoldFrames > 59)
     {
+        if (gActionSelectionCursor[gActiveBattler] < 3)
+        {
+            PlaySE(SE_SELECT);
+            ActionSelectionDestroyCursorAt(gActionSelectionCursor[gActiveBattler]);
+            gActionSelectionCursor[gActiveBattler] = 3;
+            ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
+        }
+
         if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
          && GetBattlerPosition(gActiveBattler) == B_POSITION_PLAYER_RIGHT
          && !(gAbsentBattlerFlags & gBitTable[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)])
