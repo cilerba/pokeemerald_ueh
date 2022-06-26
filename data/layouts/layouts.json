@@ -4550,6 +4550,16 @@
       "secondary_tileset": "gTileset_UEHForest",
       "border_filepath": "data/layouts/CoguWoods/border.bin",
       "blockdata_filepath": "data/layouts/CoguWoods/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUMBRIDGE_TOWN_LAB_2F",
+      "name": "LumbridgeTown_Lab_2F_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_UEHBuilding",
+      "secondary_tileset": "gTileset_UEHGenericBuilding_1",
+      "border_filepath": "data/layouts/LumbridgeTown_Lab_2F/border.bin",
+      "blockdata_filepath": "data/layouts/LumbridgeTown_Lab_2F/map.bin"
     }
   ]
 }

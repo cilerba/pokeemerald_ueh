@@ -73,6 +73,7 @@
 #define MAP_LUMBRIDGE_TOWN_PLAYERS_HOUSE_1F (1 | (1 << 8))
 #define MAP_LUMBRIDGE_TOWN_LAB_1F           (2 | (1 << 8))
 #define MAP_LUMBRIDGE_TOWN_HOUSE1           (3 | (1 << 8))
+#define MAP_LUMBRIDGE_TOWN_LAB_2F           (4 | (1 << 8))
 
 // gMapGroup_IndoorIrenia
 #define MAP_IRENIA_TOWN_POKEMON_CENTER_1F (0 | (2 << 8))

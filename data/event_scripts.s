@@ -1089,3 +1089,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route2/scripts.inc"
 
 	.include "data/maps/CoguWoods/scripts.inc"
+
+	.include "data/maps/LumbridgeTown_Lab_2F/scripts.inc"
